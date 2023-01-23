@@ -1,0 +1,125 @@
+.section-cards {
+
+    
+
+    &__header {
+        text-align: center;
+        background-color: $color-bg-light;
+    }
+
+    &__products-search-container {
+        padding: 0.5rem 2rem;
+        background-color: $color-bg-light;
+        
+            .product-search {
+                display: flex;
+                padding: 0.5rem 2rem;
+                // border: solid 1px $color-bg-light-2;
+                width: 100%;
+                
+            }
+
+            .product-search__label {
+                display: none;
+                // margin: 0 5px;
+                // padding: 0;
+                // font-size: 1.3rem;
+                // color: $color-text-dark2;
+                // // background-color: red;
+            }
+
+            .product-search__logo-buscar {
+                width: 1.5rem;
+                margin: 0 10px 0px 0px;
+                
+            }
+
+            input {
+                width: 100%;
+                height: 1.5rem;
+                margin: 0;
+                border-color: none;
+
+                &:hover {
+                    border-color: $color-text-dark2;
+                }
+            }
+
+    
+            .product-search__btn {
+            background-color: $color-text-dark2;
+            color: $color-text-ligth;
+            height: 1.5rem;
+            padding: 0 0.5rem;
+            margin: 0;
+            // border: none;
+            
+                &:hover {
+                color: $color-text-dark2;
+                background-color: $color-bg-light-2;
+                border: none;
+                }
+            }
+
+    }
+
+
+    // &__products-count {
+        
+    // }
+
+    &__title {
+        font-size: 2rem;
+        color: $color-text-dark2;
+    }
+
+    &__subtitle {
+        color: $color-text-dark;
+        font-size: 1rem;
+        text-align: center;
+        padding:  1rem 2rem;
+        
+    }
+
+    @keyframes anim{
+        0% {color: rgb(255, 0, 0);} 
+        25% {color: rgb(119, 0, 255);} 
+        50% {color: rgb(0, 38, 255);} 
+        75% {color: rgb(1, 158, 14);} 
+        100% {color: rgb(255, 72, 0);}
+    }
+
+    .palabra-color {
+        animation-name: anim;
+        animation-duration: 5s;
+        animation-iteration-count: infinite;
+    }
+        
+    .cards-container {
+        background-color: blue;
+        display: grid;
+        grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    }
+
+}
+
+@media screen and (min-width: 600px) {
+
+    .section-cards {
+
+        &__products-search-container {
+            padding: 0.5rem 6rem;
+    }
+} 
+}
+
+@media screen and (min-width: 1000px) {
+
+    .section-cards {
+
+        &__products-search-container {
+            padding: 0.5rem 8rem;
+    }
+} 
+
+}
