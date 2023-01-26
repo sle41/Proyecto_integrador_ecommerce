@@ -26,30 +26,41 @@ body {
 }
 
 .card {
-  margin: 1rem;
-  border: 1px solid red;
+  flex-direction: column;
+  box-shadow: 5px 5px 10px rgb(202, 202, 202);
+  transition: 0.3s ease;
+  border-radius: 0 0 2% 2%;
+  margin: 2rem;
+  border-left: 1px solid rgba(165, 164, 164, 0.315);
 }
 .card__header {
-  height: 120px;
-  background-color: orange;
+  overflow: hidden;
+  height: 150px;
 }
 .card__img {
-  height: 120px;
+  height: 200px;
+  width: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  transition: 0.3s ease-in-out;
 }
 .card__body {
   padding: 1rem;
+  background-color: white;
 }
 .card__title {
-  font-weight: 500;
+  font-weight: 400;
   font-size: 1.5rem;
-  border-bottom: 2px solid orangered;
+  text-align: center;
+  border-bottom: 1px solid rgb(6, 1, 22);
 }
 .card__description {
-  padding: 1.5rem 0 2rem;
+  padding: 0.5rem 1rem 0.5rem 0.5rem;
 }
 .card__price {
+  text-align: end;
   font-weight: 500;
-  font-size: 1.5rem;
+  font-size: 1rem;
   color: rgb(4, 98, 20);
 }
 .card__footer {
@@ -58,14 +69,30 @@ body {
   padding: 1rem;
 }
 .card__date {
-  color: blue;
+  color: rgb(24, 24, 24);
 }
 .card__btn {
-  padding: 1rem 1.5rem;
-  background-color: blue;
+  text-align: left;
+  margin: 5px;
+  padding: 0.5rem 0.8rem;
+  border-radius: 10%;
+  background-color: rgba(0, 110, 255, 0.808);
   color: white;
 }
 
+.card:hover {
+  box-shadow: 5px 5px 10px rgb(156, 156, 156);
+}
+
+.card:hover .card__img {
+  transform: scale(1.2);
+}
+
+@media screen and (min-width: 600px) {
+  .card {
+    margin: 1rem;
+  }
+}
 .header {
   position: fixed;
   width: 100%;
@@ -275,6 +302,7 @@ body {
   border: none;
 }
 .section-cards__title {
+  padding: 0 1rem;
   font-size: 2rem;
   color: rgb(6, 1, 22);
 }
@@ -327,12 +355,27 @@ body {
           animation-iteration-count: infinite;
 }
 .section-cards .cards-container {
-  background-color: blue;
+  background-color: white;
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  grid-template-columns: repeat(auto-fill, minmax(300px, 2fr));
+}
+.section-cards__category--text {
+  font-size: 1.2rem;
+  margin-left: 5px;
+  padding: 0.3rem;
+  text-align: left;
+}
+.section-cards__products-count {
+  margin-left: 10px;
+  margin-bottom: 5px;
+  text-align: left;
 }
 
 @media screen and (min-width: 600px) {
+  .section-cards__title {
+    font-size: 2rem;
+    color: rgb(6, 1, 22);
+  }
   .section-cards__products-search-container {
     padding: 0.5rem 6rem;
   }

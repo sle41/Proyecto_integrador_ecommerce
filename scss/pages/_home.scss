@@ -21,11 +21,6 @@
 
             .product-search__label {
                 display: none;
-                // margin: 0 5px;
-                // padding: 0;
-                // font-size: 1.3rem;
-                // color: $color-text-dark2;
-                // // background-color: red;
             }
 
             .product-search__logo-buscar {
@@ -63,12 +58,8 @@
 
     }
 
-
-    // &__products-count {
-        
-    // }
-
     &__title {
+        padding: 0 1rem;
         font-size: 2rem;
         color: $color-text-dark2;
     }
@@ -96,9 +87,22 @@
     }
         
     .cards-container {
-        background-color: blue;
+        background-color: white;
         display: grid;
-        grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+        grid-template-columns: repeat(auto-fill, minmax(300px, 2fr));
+    }
+
+    &__category--text {
+        font-size: 1.2rem;
+        margin-left: 5px;
+        padding: 0.3rem;
+        text-align: left;
+    }
+
+    &__products-count {
+        margin-left: 10px;
+        margin-bottom: 5px;
+        text-align: left;
     }
 
 }
@@ -106,6 +110,11 @@
 @media screen and (min-width: 600px) {
 
     .section-cards {
+
+        &__title {
+            font-size: 2rem;
+            color: $color-text-dark2;
+        }
 
         &__products-search-container {
             padding: 0.5rem 6rem;
