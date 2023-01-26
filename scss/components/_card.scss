@@ -10,11 +10,11 @@
 
     &__header {
         overflow: hidden;
-        height: 150px;
+        height: 350px;
     }
 
     &__img {
-        height: 200px;
+        height: 350px;
         width: 100%;
         object-fit: cover;
         transition: .3s ease-in-out;
@@ -26,7 +26,7 @@
     }
 
     &__title {
-        font-weight: 400;
+        font-weight: 350;
         font-size: 1.5rem;
         text-align: center;
         border-bottom: 1px solid $color-text-dark2;}
