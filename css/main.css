@@ -84,10 +84,6 @@ body {
   box-shadow: 5px 5px 10px rgb(156, 156, 156);
 }
 
-.card:hover .card__img {
-  transform: scale(1.2);
-}
-
 @media screen and (min-width: 600px) {
   .card {
     margin: 1rem;
@@ -184,6 +180,9 @@ body {
 .navbar__nav-link {
   color: rgb(6, 1, 22);
 }
+.navbar__nav-item:hover {
+  transform: scale(1.2);
+}
 
 .user-navbar {
   margin-left: auto;
@@ -219,45 +218,98 @@ body {
   }
 }
 .footer {
+  padding-bottom: 60px;
+  padding-left: 30px;
   display: flex;
   flex-direction: column;
-  background-color: #222;
+  background-color: rgb(6, 1, 22);
+}
+.footer__title {
+  color: rgb(255, 255, 255);
+  font-size: 1.3rem;
+  padding: 1rem 0rem;
 }
 .footer__column {
-  padding: 1rem 1.5rem;
+  padding: 0.5rem;
 }
 .footer__contact-item {
   list-style: none;
 }
 .footer__contact-link {
-  color: white;
-  padding: 0.25rem;
+  padding: 0.5rem 0;
+  color: rgb(255, 255, 255);
   display: flex;
   align-items: center;
-  gap: 0.5rem;
+  gap: 1rem;
 }
 .footer__contact-icon {
   font-size: 1.75rem;
+  color: rgb(255, 255, 255);
 }
-.footer__contact-icon--facebook {
-  color: #38529a;
+.footer__company {
+  display: flex;
 }
-.footer__contact-icon--instagram {
-  color: #f14d59;
+.footer__company--name {
+  color: rgba(165, 164, 164, 0.315);
 }
-.footer__contact-icon--linkedin {
-  color: #0077b6;
+.footer__logo {
+  display: none;
+}
+.footer__copyrigth {
+  color: rgba(165, 164, 164, 0.315);
 }
 
 @media screen and (min-width: 600px) {
   .footer {
     flex-direction: row;
+    align-items: center;
+    padding: 0;
+    padding-bottom: 80px;
+  }
+  .footer__column {
+    margin: 10px;
   }
 }
 .main {
   margin-top: 50px;
   padding: 0;
-  background-color: rgb(182, 255, 11);
+  background-color: rgb(255, 255, 255);
+}
+
+.whatsapp-container__img {
+  width: 55px;
+  height: 55px;
+  position: fixed;
+  line-height: 55px;
+  bottom: 30px;
+  right: 30px;
+  z-index: 100;
+  background-color: rgb(1, 59, 1);
+  border: 4px solid rgb(1, 59, 1);
+  border-radius: 60%;
+  transition: ease 1s;
+  -webkit-animation: efecto 2s infinite;
+          animation: efecto 2s infinite;
+}
+.whatsapp-container__img:hover {
+  transform: scale(1.1);
+  transition: 0.3s;
+}
+@-webkit-keyframes efecto {
+  0% {
+    box-shadow: 0 0 0 0 rgba(0, 0, 0, 0.25);
+  }
+  100% {
+    box-shadow: 0 0 0 25px rgba(0, 0, 0, 0);
+  }
+}
+@keyframes efecto {
+  0% {
+    box-shadow: 0 0 0 0 rgba(0, 0, 0, 0.25);
+  }
+  100% {
+    box-shadow: 0 0 0 25px rgba(0, 0, 0, 0);
+  }
 }
 
 .section-cards__header {
@@ -359,6 +411,9 @@ body {
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(300px, 2fr));
 }
+.section-cards .section-cards__cat {
+  background-color: rgb(182, 255, 11);
+}
 .section-cards__category--text {
   font-size: 1rem;
   margin-left: 5px;
@@ -383,5 +438,69 @@ body {
 @media screen and (min-width: 1000px) {
   .section-cards__products-search-container {
     padding: 0.5rem 8rem;
+  }
+}
+.form {
+  padding: 2rem 2rem 3rem 1rem;
+}
+
+.box-id {
+  display: column;
+}
+.box-id .title-contacto {
+  padding-bottom: 5px;
+}
+.box-id__title {
+  margin: 10px;
+  color: rgb(24, 24, 24);
+  text-align: left;
+  font-size: 1rem;
+  width: 100%;
+  box-sizing: border-box;
+  padding-bottom: 10px;
+}
+.box-id-contacto {
+  padding: 1rem 1rem;
+  background-color: rgba(165, 164, 164, 0.315);
+  border-radius: 2%;
+  color: rgb(6, 1, 22);
+  width: 100%;
+  height: 300px;
+}
+.box-id #idInputName {
+  width: 100%;
+  padding: 2px 3px;
+}
+.box-id #emailInput {
+  width: 100%;
+  padding: 2px 3px;
+}
+.box-id #descriptionInput {
+  width: 100%;
+  padding: 0 3px;
+  height: 120px;
+}
+.box-id-maps {
+  width: 100%;
+  height: 300px;
+}
+.box-id .buttom {
+  padding: 5px;
+  background-color: transparent;
+  border-radius: 20px;
+  width: 100%;
+  margin-top: 3px;
+}
+.box-id .buttom:hover {
+  background-color: rgb(6, 1, 22);
+  color: rgb(255, 255, 255);
+}
+
+@media screen and (min-width: 600px) {
+  .form {
+    padding: 1rem 2rem 8rem 2rem;
+  }
+  .form .box-id {
+    display: flex;
   }
 }/*# sourceMappingURL=main.css.map */

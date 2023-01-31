@@ -5,8 +5,169 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Contacto</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css" integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="/css/main.css">
 </head>
 <body>
-    <h1>Contacto</h1>
+    <header>
+        <header class="header">
+            <nav class="navbar">
+                <a href="/index.html" class="navbar__nav-link">
+                    <img class="navbar__logo" src="/assets/images/LOGO PM.png" alt="Logo del ecommerce">
+                </a>
+                <div class="user-navbar">
+                    <div class="user-navbar__cart-icon-container">
+                        <i class="fa-solid fa-cart-shopping"></i>
+                    </div>
+                    <div class="user-navbar__user-avatar-container">
+                        <img src="https://cdn-icons-png.flaticon.com/512/1077/1077114.png" class="user-navbar__user-avatar" alt="Imagen de usuario">
+                    </div>
+                    <!-- TODO: avatar de la persona logueada o nombre -->
+                </div>
+                
+                <input type="checkbox" class="navbar__menu-btn" id="menu-btn">
+    
+                <label for="menu-btn" class="navbar__menu-label">
+                    <span class="navbar__menu-icon"></span>
+                </label>
+    
+    
+                <ul class="navbar__nav-links-container">
+                    <li class="navbar__nav-item">
+                        <a href="/index.html" class="navbar__nav-link">Inicio</a>
+                    </li>
+                    <li class="navbar__nav-item">
+                        <a href="/pages/contact/contact.html" class="navbar__nav-link">Contacto</a>
+                    </li>
+                    <li class="navbar__nav-item">
+                        <a href="/pages/about-us/about-us.html" class="navbar__nav-link">Nosotros</a>
+                    </li>
+                    <li class="navbar__nav-item">
+                        <a href="/pages/register/register.html" class="navbar__nav-link">Registro</a>
+                    </li>
+                </ul>
+            </nav>
+    </header>
+    <main class="main">
+        <form class="form">
+            <div class="box-id">
+                <div class="box-id__title">
+                    <h2 class="title-contacto">Contáctanos!</h2>
+                    <div class="box-id-contacto">
+                        <div class="box-id-contacto__contacto">
+                            <div class="box-id_name">
+                                <label for="box-id__name--id">Nombre y Apellido *</label> <br>
+                                <input type="text" name="fullName" id="idInputName" required minlength="8" maxlength="20" placeholder="Querentin Tarantino">
+                            </div>
+
+                            <div class="box-id-contacto__email">
+                                <label for="box-id-contacto__email--uss">Correo Electrónico *</label> <br>
+                                <input type="email" name="email" id="emailInput" placeholder="example@gmail.com" required minlength="8" maxlength="50" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$">
+                            </div>
+
+                            <div class="box-id-contacto__consulta">
+                                <label for="box-id__consulta--observation">Consulta </label> <br>
+                                <textarea name="description" rows="5" cols="20" placeholder="Escribe tu consulta" id="descriptionInput" height=""></textarea>
+                            </div>
+                        </div>
+                        <button class="buttom" type="submit">ENVIAR</button>
+                    </div>
+                </div>    
+                
+
+                <div class="box-id__title">
+                    <h2 class="title-contacto">Visitanos!</h2>
+                    <div class="box-id">
+                        <div class="box-id-maps">  
+                            <div class="box-id__maps">
+                                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1641.392730999067!2d-58.636925630271435!3d-34.63486144518965!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x9bf79e926bbec364!2sPM%20SPRAY%20-%20Servicio%20de%20GRAFFITI!5e0!3m2!1ses-419!2sar!4v1666743393513!5m2!1ses-419!2sar" width="100%" height="300px" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </form>
+    </main>
+
+    <div class="whatsapp-container">
+        <a href="www.instagram.com" class="whatsapp-container__link" target="_blank">
+            <img src="/assets/images/Logo_wsp.png" alt="Whatsapp contact link" class="whatsapp-container__img" >
+        </a>
+    </div>
+
+    <footer class="footer">
+
+        <div class="footer__column">
+            <h2 class="footer__title">Contacto</h2>
+            <ul class="footer__contact-container">
+                <li class="footer__contact-item">
+                    <a href="pages/contact/contact.html" class="footer__contact-link">
+                        <i class="fa-solid fa-square-phone-flip footer__contact-icon"></i>
+                        11 4444 3333
+                    </a>
+                </li>
+                <li class="footer__contact-item">
+                    <a href="pages/contact/contact.html" class="footer__contact-link">
+                        <i class="fa-solid fa-location-dot footer__contact-icon"></i>
+                        Calle Falsa - 123
+                    </a>
+                </li>
+                <li class="footer__contact-item">
+                    <a href="pages/contact/contact.html" class="footer__contact-link">
+                        <i class="fa-solid fa-envelope footer__contact-icon"></i>
+                        somos@pmspray.com.ar
+                    </a>
+                </li>
+            </ul>
+        </div>
+
+        <div class="footer__column">
+            <h2 class="footer__title">Nuestras Redes</h2>
+        <ul class="footer__contact-container">
+            <li class="footer__contact-item"> 
+                <a href="www.facebook.com" class="footer__contact-link">
+                    <i class="fa-brands fa-facebook footer__contact-icon footer__contact-icon--facebook"></i>
+                    Facebook
+                </a>
+            </li>
+            <li class="footer__contact-item">
+                <a href="www.instagram.com" class="footer__contact-link">
+                    <i class="fa-brands fa-instagram 
+                    footer__contact-icon
+                    footer__contact-icon--instagram"></i>
+                    Instagram
+                </a>
+            </li>
+            <li class="footer__contact-item">
+                <a href="https://ar.linkedin.com/" class="footer__contact-link">
+                    <i class="fa-brands fa-linkedin 
+                    footer__contact-icon
+                    footer__contact-icon--linkedin"></i>
+                    LinkedIn
+                </a>
+            </li>
+        </ul>
+    </div>
+    
+    
+
+    <div class="footer__column">
+        
+        <div class="footer__column--company">
+            <div class="footer__company">
+                <h2 class="footer__company--name">
+                PM SPRAY
+                </h2>
+                <img src="/assets/images/LOGO PM.png" alt="Company Logo" class="footer__logo" width="50">
+            </div>
+
+            <p class="footer__copyrigth">
+                Todos los derechos reservados a Pm Spray.
+            </p>
+        </div>
+    </div>
+
+</footer>
 </body>
 </html>

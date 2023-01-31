@@ -99,6 +99,10 @@
         color: $color-text-dark2;
     }
 
+    &__nav-item:hover {
+        transform: scale(1.2);
+    }
+
 }
 
 .user-navbar {

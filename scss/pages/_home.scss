@@ -92,6 +92,10 @@
         grid-template-columns: repeat(auto-fill, minmax(300px, 2fr));
     }
 
+    .section-cards__cat {
+        background-color: $color-bg-green;
+    }
+
     &__category--text {
         font-size: 1rem;
         margin-left: 5px;
