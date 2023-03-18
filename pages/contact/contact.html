@@ -55,22 +55,25 @@
                     <h2 class="title-contacto">Contáctanos!</h2>
                     <div class="box-id-contacto">
                         <div class="box-id-contacto__contacto">
-                            <div class="box-id_name">
+                            <div class="box-id__name">
                                 <label for="box-id__name--id">Nombre y Apellido *</label> <br>
                                 <input type="text" name="fullName" id="idInputName" required minlength="8" maxlength="20" placeholder="Querentin Tarantino">
                             </div>
 
-                            <div class="box-id-contacto__email">
-                                <label for="box-id-contacto__email--uss">Correo Electrónico *</label> <br>
-                                <input type="email" name="email" id="emailInput" placeholder="example@gmail.com" required minlength="8" maxlength="50" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$">
+                            <div class="box-id__contacto-email">
+                                <label for="box-id__contacto-email--uss">Correo Electrónico *</label> <br>
+                                <input type="email" name="email" id="emailInput" placeholder="example@gmail.com" required minlength="8" maxlength="20" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$">
                             </div>
 
-                            <div class="box-id-contacto__consulta">
+                            <div class="box-id__consulta">
                                 <label for="box-id__consulta--observation">Consulta </label> <br>
                                 <textarea name="description" rows="5" cols="20" placeholder="Escribe tu consulta" id="descriptionInput" height=""></textarea>
                             </div>
+
+                            <div class="box-id__enviar">
+                                <button class="box-id__enviar-buttom" type="submit">ENVIAR</button>
+                            </div>
                         </div>
-                        <button class="buttom" type="submit">ENVIAR</button>
                     </div>
                 </div>    
                 
