@@ -1,14 +1,20 @@
+//ABSTRACTS
 @import "abstracts/variables";
+@import "abstracts/utilities"
 
+//BASE
 @import "base/reset";
-
 @import "base/typography";
 
+//COMPONENTES
 @import "components/card";
+@import "components/alert-dialog";
 
 @import "layout/header";
 @import "layout/footer";
 @import "layout/main";
+
+//PAGES
 
 @import "pages/home";
 

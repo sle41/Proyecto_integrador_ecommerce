@@ -51,10 +51,10 @@
         <h1 class="title">REGISTRO DE USUARIO</h1>
 
         <section class="section">
-            <form id="register" class="register">                
+            <form id="registerForm" class="register">                
                 <div class="name-container form-container">
                     <label class="name-container__label" for="name">Nombre Completo</label>
-                    <input class="name-container__input input" type="text" name="name" id="name" placeholder="Nombre y Apellido" required>
+                    <input class="name-container__input input" type="text" name="fullName" id="name" placeholder="Nombre y Apellido" required>
                 </div>
     
                 <div class="mail-container form-container">
@@ -65,7 +65,7 @@
     
                 <div class="password-container form-container">
                     <label class="password-container__label" for="password1">Contraseña</label>
-                    <input class="password-container__input input" type="password" name="password1" id="password1" pattern="^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[@$!%*?&])[A-Za-z\d@$!%*?&]{8,}$" required>
+                    <input class="password-container__input input" type="password" name="password1" id="password1"  required>
                 </div>
     
                 <div class="reply-password-container form-container">
@@ -75,7 +75,7 @@
     
                 <div class="age-container form-container">
                     <label class="age-container__label" for="age">Edad</label>
-                    <input class="age-container__input input" maxlength="2" type="number" name="age" id="age" min="12" max="110" step="5" required>
+                    <input class="age-container__input input" maxlength="2" type="number" name="age" id="age" min="12" max="110" required>
                 </div>
     
                 <div class="born-container form-container">
@@ -340,13 +340,13 @@
     
                 <label class="form-container" for="">Sexo</label>
                 <div class="form-container">
-                    <input type="radio" class="form-container__item" name="femenino" id="female" required>
+                    <input type="radio" class="form-container__item" name="gender" id="female" valu="female" required>
                     <label class="form-container__label" for="female">Femenino</label>
                     
-                    <input type="radio" class="form-container__item" name="masculino" id="male">
+                    <input type="radio" class="form-container__item" name="gender" id="male" value="male">
                     <label class="form-container__label" for="male">Masculino</label>
                     
-                    <input type="radio" class="form-container__item" name="otro" id="other">
+                    <input type="radio" class="form-container__item" name="gender" id="other" value="other">
                     <label class="form-container__label" for="other">Otro</label>
                 </div>
     
@@ -354,7 +354,8 @@
                     <input class="therms-container__input" type="checkbox" name="checkbox" id="therms" required>
                     <label class="therms-container__label" for="therms">Acepto los términos y condiciones</label>
                 </div>
-                <input class="register__button" value="Enviar" type="submit">
+                <button id="registerSubmit" type="submit" class="register__button" >Enviar</button>
+                <!-- <input class="register__button" value="Enviar" type="submit"> -->
             </form>
         </section>
     </main>
@@ -431,5 +432,7 @@
     </div>
 
     </footer>
+
+    <script src="/js/register.js"></script>
 </body>
 </html>

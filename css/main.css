@@ -101,6 +101,17 @@ body {
     margin: 1rem;
   }
 }
+.alert-dialog {
+  position: absolute;
+  bottom: 15px;
+  left: 50%;
+  transform: translateX(-50%);
+  background-color: red;
+  padding: 2rem;
+  font-size: white;
+  text-align: center;
+}
+
 .header {
   position: fixed;
   width: 100%;
@@ -562,7 +573,7 @@ body {
   }
   .register {
     box-shadow: 0px 5px 8px 2px rgb(24, 24, 24);
-    padding: 1.5rem 0rem 0rem 0rem;
+    padding: 1.5rem 4rem 4rem 4rem;
   }
 }
 main {
