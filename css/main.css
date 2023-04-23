@@ -36,11 +36,12 @@ body {
 }
 
 .card {
+  overflow: hidden;
   display: flex;
   flex-wrap: wrap;
-  background-color: red;
-  transition: 0.5s ease;
-  border-radius: 0 0 2% 2%;
+  background-color: rgb(7, 0, 26);
+  transition: 0.3s ease;
+  border-radius: 0 0 10px 10px;
   margin: 2rem;
   border: 0.3px solid rgb(34, 0, 118);
 }
@@ -56,58 +57,81 @@ body {
   transition: 0.3s ease-in-out;
 }
 .card__body {
-  display: flex;
   flex-grow: 1;
-  width: 100%;
-  padding: 0rem 0rem;
+  display: flex;
+  padding: 0rem 1rem;
   flex-direction: column;
   overflow: hidden;
   background-color: rgb(7, 0, 26);
 }
 .card__title {
-  padding: 1rem 0.8rem;
-  height: 100%;
-  width: 100%;
-  display: block;
   font-weight: 350;
   font-size: 1.5rem;
   text-align: center;
   color: white;
   border-bottom: 1px solid rgb(255, 0, 60);
+  padding: 1rem 1rem;
+  height: 100%;
 }
 .card__description {
-  display: flex;
   color: white;
-  padding: 2rem 1rem;
+  padding: 2rem 0rem;
 }
 .card__fepre {
-  display: inline-block;
+  width: 100%;
+  display: flex;
   text-align: center;
   justify-content: space-between;
-  padding: 1rem;
+  padding: 1rem 1rem;
+  background-color: rgb(7, 0, 26);
 }
 .card__date {
-  text-align: left;
-  color: rgb(15, 0, 55);
+  flex-basis: auto;
+  color: white;
+  font-weight: 300;
 }
 .card__price {
-  text-align: end;
-  font-weight: 500;
-  font-size: 1rem;
-  color: rgb(34, 0, 118);
+  flex-basis: auto;
+  margin-left: auto;
+  font-weight: 1000;
+  font-size: 1.5rem;
+  color: white;
 }
 .card__footer {
+  width: 100%;
+  background-color: rgb(7, 0, 26);
+}
+.card__btn-container {
+  padding: 0rem 1rem 2rem 1rem;
+  width: 100%;
   justify-content: space-between;
-  padding: 0.5rem 1rem 0.5rem 1rem;
   display: flex;
 }
-.card__btn {
-  margin: 5px;
-  padding: 0.5rem 0.8rem;
-  border-radius: 10%;
-  background-color: rgba(34, 203, 4, 0.839);
+.card__btn-det {
+  flex-basis: auto;
+  font-size: 1rem;
+  font-weight: 300;
+  padding: 0.6rem 0.8rem;
+  border-radius: 10px;
+  border: 2px solid rgb(34, 0, 118);
+  transition: background-color 0.3s ease-in-out;
   color: white;
-  box-shadow: none;
+}
+.card__btn-det:hover {
+  background-color: rgb(34, 0, 118);
+}
+.card__btn-com {
+  font-size: 1.2rem;
+  padding: 0.5rem 0.8rem;
+  border-radius: 10px;
+  background-color: rgba(0, 110, 255, 0.808);
+  color: white;
+  transition: background-color 0.3s ease-in-out;
+  flex-basis: auto;
+  margin-left: auto;
+}
+.card__btn-com:hover {
+  background-color: rgba(23, 136, 0, 0.808);
 }
 
 .card:hover {

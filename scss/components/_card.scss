@@ -6,11 +6,12 @@
 
 
 .card {
+    overflow: hidden;
     display: flex;
     flex-wrap: wrap;
-    background-color: red;
-    transition: .5s ease;
-    border-radius: 0 0 2% 2%;
+    background-color: $color-bg-secondary;
+    transition: .3s ease;
+    border-radius: 0 0 10px 10px;
     margin: 2rem;
     border: 0.3px solid $color-bg-primary;
 
@@ -28,75 +29,105 @@
     }
 
     &__body {
+        flex-grow: 1;
         display: flex;
-        flex-grow:1;
-        width: 100%;
-        padding: 0rem 0rem;
+        padding: 0rem 1rem;
         flex-direction: column;
         overflow: hidden;
         background-color: $color-bg-secondary ;
     }
 
     &__title{
-        padding: 1rem 0.8rem;
-        height: 100%;
-        width: 100%;
-        display: block;
         font-weight: 350;
         font-size: 1.5rem;
         text-align: center;
         color: $color-text-ligth;
-        border-bottom: 1px solid $color-bg-light;}
+        border-bottom: 1px solid $color-bg-light;
+        padding: 1rem 1rem;
+        height: 100%;
+
+    }
 
     &__description {
-        display: flex;
         color: $color-text-ligth;
-        padding: 2rem 1rem;
+        padding: 2rem 0rem;
     }
 
     &__fepre {
-        display: inline-block;
+        width: 100%;
+        display: flex;
         text-align: center;
         justify-content: space-between;
-        padding: 1rem;
+        padding: 1rem 1rem;
+        background-color: $color-bg-secondary;
     }
 
     &__date {
-        text-align: left;
-        color: $color-text-dark;
+        // text-align: left;
+        flex-basis: auto;
+        color: $color-text-ligth;
+        font-weight: 300;
     }
 
     &__price {
-        text-align: end;
-        font-weight: 500;
-        font-size: 1rem;
-        color: $color-bg-primary;
+        // text-align: end;
+        // margin-left: auto;
+        flex-basis: auto;
+        margin-left: auto;
+        font-weight: 1000;
+        font-size: 1.5rem;
+        color: $color-text-ligth;
     }
 
     &__footer {
-        justify-content: space-between;
-        padding: 0.5rem 1rem 0.5rem 1rem;
-        display: flex;
+
+        width: 100%;
+        // padding: 0.5rem 1rem 1rem 1rem;
+        background-color: $color-bg-secondary;
     }
 
-    &__btn {
-        margin: 5px;
-        padding: 0.5rem 0.8rem;
-        border-radius: 10%;
-        background-color: rgba(34, 203, 4, 0.839);
-        color: white;
-        box-shadow: none;
+    &__btn-container {
+        padding: 0rem 1rem 2rem 1rem;
+        width: 100%;
+        justify-content: space-between;
+        display: flex;
+
     }
+
+    &__btn-det {
+        flex-basis: auto;
+        font-size: 1rem;
+        font-weight: 300;
+        padding: 0.6rem 0.8rem;
+        border-radius: 10px;
+        border: 2px solid $color-bg-primary;
+        transition: background-color 0.3s ease-in-out;
+        color: white;
+        }
+    &__btn-det:hover {
+        background-color: $color-bg-primary;
+    }
+
+    &__btn-com {
+        font-size: 1.2rem;
+        padding: 0.5rem 0.8rem;
+        border-radius: 10px;
+        background-color: $color-btn;
+        color: white;
+        transition: background-color 0.3s ease-in-out;
+        flex-basis: auto;
+        margin-left: auto;
+        }
+    &__btn-com:hover {
+        background-color: $color-btn-2;
+    }
+        
 }
 
 
 .card:hover {
     box-shadow: 0px 2px 7px 0.1px $color-bg-primary;
 }
-
-// .card:hover .card__img {
-//     transform: scale(1.2);
-// }
 
 
 @media screen and (min-width: 600px) {
