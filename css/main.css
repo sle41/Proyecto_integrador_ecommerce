@@ -539,33 +539,49 @@ body {
 .box-id__consulta {
   padding: 0rem 0rem 1rem;
 }
-.box-id__title {
-  margin: 10px;
-  color: rgb(15, 0, 55);
+.box-id__title-1 {
+  color: white;
   text-align: left;
   font-size: 1rem;
   width: 100%;
-  box-sizing: border-box;
+  padding-bottom: 20px;
+}
+.box-id__title-2 {
+  color: white;
+  width: 100%;
   padding-bottom: 20px;
 }
 .box-id-contacto {
-  padding: 0rem 2rem;
-  background-color: rgb(77, 77, 77);
-  border-radius: 2%;
-  color: rgb(7, 0, 26);
+  display: flex;
+  flex-direction: column;
+  padding: 1rem 2rem;
+  background-color: rgb(7, 0, 26);
+  border: 1px solid rgb(255, 0, 60);
+  border-radius: 6px;
+  color: white;
   width: 100%;
-  height: 300px;
+  height: 100%;
 }
 .box-id-maps {
   width: 100%;
-  height: 300px;
+  height: 100%;
+}
+.box-id__enviar {
+  width: 100%;
+  display: flex;
+  justify-content: center;
 }
 .box-id__enviar-buttom {
-  background-color: transparent;
-  width: 100%;
+  background-color: rgb(255, 0, 60);
+  font-size: medium;
+  padding: 0.5rem;
+  width: 50%;
+  border-radius: 8px;
+  border: none;
+  transition: background-color 0.4s ease;
 }
 .box-id__enviar-buttom:hover {
-  background-color: rgb(7, 0, 26);
+  background-color: rgba(23, 136, 0, 0.808);
   color: white;
 }
 
@@ -595,6 +611,9 @@ body {
   }
   .form .box-id {
     display: flex;
+  }
+  .form .box-id__title-2 {
+    margin-left: 8px;
   }
 }
 .section {
