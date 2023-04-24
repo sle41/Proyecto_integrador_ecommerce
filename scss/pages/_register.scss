@@ -2,19 +2,21 @@
 .section{
     display: flex;
     justify-content: center;
-    background: $color-bg-light;
+    background: $color-bg-secondary;
+    // color: $color-bg-white;
 }
 
 .title{
     text-align: center;
-    font-weight: 2rem;
-    color: $color-text-dark2;
+    font-weight: 4rem;
+    color: $color-text-ligth;
     padding: 1rem 0rem 1rem 0rem;
 }
 
 .register{
     padding: 1rem 1.5rem 10rem 1.5rem;
-    background-color: $color-bg-light-2;
+    background-color: $color-bg-secondary;
+    // color: $color-text-ligth;
 
     &__button{
         height: 35px;
@@ -23,7 +25,7 @@
         border-color: $color-bg-light-2;
         border-radius: 5px;
         box-shadow: none;
-        color: $color-text-dark2;
+        color: $color-text-ligth;
         &:hover{ 
             background-color: $color-text-dark2;
             border-color: $color-text-dark;
@@ -35,7 +37,7 @@
 .form-container{
     display: block;
     width: 100%;
-    color: $color-text-dark2;
+    color: $color-text-ligth;
 }
 
 .input {
@@ -62,6 +64,10 @@
 
 @media screen and (min-width: 600px) {
 
+    .section {
+        padding: 2rem 0 4rem 0;
+        background: $color-bg-primary;
+    }
 
     .register{
         
