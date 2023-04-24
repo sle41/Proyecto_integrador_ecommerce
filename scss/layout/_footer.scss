@@ -3,11 +3,11 @@
     padding-left: 30px;
     display: flex;
     flex-direction: column;
-    background-color: $color-text-dark2;
-
+    background-color: $color-bg-light-3;
+    background-image: linear-gradient(to top, rgb(255, 255, 255) 50%, rgb(201, 200, 200) 100%);
 
     &__title {
-        color: $color-text-ligth;
+        color: $color-text-dark;
         font-size: 1.3rem;
         padding: 1rem 0rem;
 
@@ -25,7 +25,7 @@
 
     &__contact-link {
         padding: 0.5rem 0;
-        color: $color-text-ligth;
+        color: $color-text-dark;
         display: flex;
         align-items: center;
         gap: 1rem;  
@@ -33,37 +33,40 @@
 
     &__contact-icon {
         font-size: 1.75rem;
-        color: $color-text-ligth;
+        color: $color-bg-primary;
     }
 
     &__company {
         display: flex;
 
         &--name {
+        padding-top: 6px;
         color: $color-bg-light-2;
         }
     }
 
     &__logo {
-        display: none;
+        display: flex;
     }
 
     &__copyrigth {
         color: $color-bg-light-2;
     }
 
-    
 }
 
 
 
 @media screen and (min-width: 600px) {
     .footer {
+
+        justify-content: space-between;
         flex-direction: row;
         align-items: center;
-        padding: 0;
+        padding: 0 1rem;
         padding-bottom: 80px;
         &__column {
+            flex: 1;
             margin: 10px;
         }
     }

@@ -298,10 +298,11 @@ body {
   padding-left: 30px;
   display: flex;
   flex-direction: column;
-  background-color: rgb(7, 0, 26);
+  background-color: rgb(229, 229, 229);
+  background-image: linear-gradient(to top, rgb(255, 255, 255) 50%, rgb(201, 200, 200) 100%);
 }
 .footer__title {
-  color: white;
+  color: rgb(15, 0, 55);
   font-size: 1.3rem;
   padding: 1rem 0rem;
 }
@@ -313,23 +314,24 @@ body {
 }
 .footer__contact-link {
   padding: 0.5rem 0;
-  color: white;
+  color: rgb(15, 0, 55);
   display: flex;
   align-items: center;
   gap: 1rem;
 }
 .footer__contact-icon {
   font-size: 1.75rem;
-  color: white;
+  color: rgb(34, 0, 118);
 }
 .footer__company {
   display: flex;
 }
 .footer__company--name {
+  padding-top: 6px;
   color: rgb(77, 77, 77);
 }
 .footer__logo {
-  display: none;
+  display: flex;
 }
 .footer__copyrigth {
   color: rgb(77, 77, 77);
@@ -337,12 +339,14 @@ body {
 
 @media screen and (min-width: 600px) {
   .footer {
+    justify-content: space-between;
     flex-direction: row;
     align-items: center;
-    padding: 0;
+    padding: 0 1rem;
     padding-bottom: 80px;
   }
   .footer__column {
+    flex: 1;
     margin: 10px;
   }
 }
