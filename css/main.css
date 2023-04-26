@@ -685,17 +685,133 @@ body {
     padding: 1.5rem 4rem 4rem 4rem;
   }
 }
-main {
-  background-color: rgb(77, 77, 77);
+.section_about-us {
+  background-color: rgb(7, 0, 26);
+}
+
+.container_about-us {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: auto;
+  grid-gap: 20px;
+}
+.container_about-us--left-column {
+  padding: 2rem;
+  margin-top: 1rem;
+  border-radius: 2px;
+  background-color: rgb(7, 0, 26);
+}
+.container_about-us--left-column---title {
+  color: white;
+  border-bottom: 1px solid rgb(255, 0, 60);
+  padding: 0rem 0rem 0.2rem 0rem;
+}
+.container_about-us--left-column---description {
+  padding: 1rem 0rem;
+  color: white;
+}
+.container_about-us--right-column {
+  max-height: 100%;
+  overflow: hidden;
+}
+
+.img-about {
+  width: 100%;
+  height: 300px;
+}
+
+.section_about-us-2 {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: auto;
+}
+
+.band-1 {
+  background-color: rgb(34, 0, 118);
+}
+.band-1__title {
+  padding-left: 0.7rem;
+  padding-right: 1rem;
+  text-align: left;
+  font-size: 50px;
   color: rgb(7, 0, 26);
 }
-
-.title {
-  margin: 0.5rem;
+.band-1__description {
+  color: rgb(182, 255, 11);
+  padding: 0.7rem;
 }
 
-.about-container__description {
-  margin: 1rem;
+.band {
+  background-color: rgb(34, 0, 118);
+  width: 100%;
+  margin: 0 auto;
+  padding: 1rem 4rem;
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: auto;
+  grid-gap: 20px;
+}
+
+.card-nosotros {
+  padding: 10px;
   text-align: center;
-  font-weight: bold;
+  box-shadow: 0px 0px 4px rgba(255, 255, 255, 0.1);
+  display: flex;
+  flex-direction: column;
+  border-radius: 4px;
+  min-height: 100%;
+  transition: all 1s ease-in;
+}
+
+.img-nosotros {
+  max-width: 100%;
+  height: 270px;
+  overflow: hidden;
+}
+
+.title-name {
+  padding: 10px;
+  color: white;
+}
+
+@media only screen and (min-width: 1000px) {
+  .container_about-us {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: auto;
+    grid-gap: 20px;
+  }
+  .container_about-us--left-column {
+    border-left: 1px solid rgb(34, 0, 118);
+    order: 1;
+    flex-basis: 50%;
+    margin: 2rem 0rem 2rem 0rem;
+  }
+  .container_about-us--right-column {
+    overflow: hidden;
+    padding: 4rem 0rem 0rem 0rem;
+  }
+  .img-about {
+    box-shadow: 0px 0px 40px rgb(34, 0, 118);
+    width: 100%;
+    height: 400px;
+  }
+  .section_about-us-2 {
+    grid-template-columns: 0.2fr 1fr;
+  }
+  .band-1__description {
+    border-bottom: 1px solid rgb(255, 0, 60);
+    padding-left: 1rem;
+  }
+}
+@media only screen and (min-width: 800px) {
+  .band {
+    width: 100%;
+    margin: 0 auto;
+    padding: 1rem 4rem;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: auto;
+    grid-gap: 20px;
+  }
 }/*# sourceMappingURL=main.css.map */
