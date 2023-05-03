@@ -117,12 +117,76 @@
     padding: 0 1rem;
     &__user-avatar {
             width: 1.8rem;
+            
     }
     &__cart-icon-container {
         color: $color-text-dark2;
         font-size: 1.5rem;
     }
 }
+
+
+//!-- LOGIN USUARIO
+
+
+.login-usuario {
+
+    &__form {
+    color: $color-text-ligth;
+    list-style: none;
+    position: absolute;
+    top: 50px;
+    background-color: $color-bg-secondary;
+    width: 100%;
+    height: 300px;
+    overflow: hidden;
+    transition: all 0.2s ease-out;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    
+
+    &--ingresar {
+        text-align: center;
+        width: 200px;
+        border-radius: 6px;
+        color: $color-text-ligth;
+        margin-top: 0.5rem;
+        padding: 0.5rem;
+        background-color: $color-bg-primary;
+        
+    }
+
+    &--nuevo{
+        border-top: 1px solid $color-bg-light;
+        padding-top: 20px;
+    
+    &_usuario {
+        border: 1px solid $color-bg-white;
+        text-align: center;
+        width: 200px;
+        color: $color-text-ligth;
+        padding: 0.5rem;
+        background-color: $color-bg-secondary;
+
+    }
+}
+
+    &--ingresar:hover {
+        background-color: $color-bg-green;
+        color: $color-bg-secondary;
+    }
+
+    &--nuevo_usuario:hover {
+        background-color: $color-bg-primary;
+
+    }
+
+}
+}
+
+
 
 @media screen and (min-width: 600px) {
     .navbar {
@@ -141,4 +205,17 @@
     .user-navbar {
         order: 3;
     }
+
+}
+
+@media screen and (min-width: 1000px) {
+.login-usuario {
+
+    &__form {
+    width: 22%;
+    right: 0;
+    height: 280px;
+    }
+
+}
 }

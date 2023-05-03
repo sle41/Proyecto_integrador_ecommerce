@@ -276,6 +276,50 @@ body {
   font-size: 1.5rem;
 }
 
+.login-usuario__form {
+  color: white;
+  list-style: none;
+  position: absolute;
+  top: 50px;
+  background-color: rgb(7, 0, 26);
+  width: 100%;
+  height: 300px;
+  overflow: hidden;
+  transition: all 0.2s ease-out;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.login-usuario__form--ingresar {
+  text-align: center;
+  width: 200px;
+  border-radius: 6px;
+  color: white;
+  margin-top: 0.5rem;
+  padding: 0.5rem;
+  background-color: rgb(34, 0, 118);
+}
+.login-usuario__form--nuevo {
+  border-top: 1px solid rgb(255, 0, 60);
+  padding-top: 20px;
+}
+.login-usuario__form--nuevo_usuario {
+  border: 1px solid white;
+  text-align: center;
+  width: 200px;
+  color: white;
+  padding: 0.5rem;
+  background-color: rgb(7, 0, 26);
+}
+.login-usuario__form--ingresar:hover {
+  background-color: rgb(182, 255, 11);
+  color: rgb(7, 0, 26);
+}
+.login-usuario__form--nuevo_usuario:hover {
+  background-color: rgb(34, 0, 118);
+}
+
 @media screen and (min-width: 600px) {
   .navbar {
     height: 50px;
@@ -291,6 +335,13 @@ body {
   }
   .user-navbar {
     order: 3;
+  }
+}
+@media screen and (min-width: 1000px) {
+  .login-usuario__form {
+    width: 22%;
+    right: 0;
+    height: 280px;
   }
 }
 .footer {
@@ -813,5 +864,117 @@ body {
     grid-template-columns: 1fr 1fr 1fr;
     grid-template-rows: auto;
     grid-gap: 20px;
+  }
+}
+.admin-producto {
+  border-top: 1px solid rgb(255, 0, 60);
+  padding: 1rem 0rem 2rem 0rem;
+  background-color: rgb(7, 0, 26);
+  justify-content: center;
+  text-align: center;
+}
+.admin-producto__title {
+  font-size: 1.5rem;
+  padding-bottom: 1.2rem;
+  color: white;
+}
+
+.input-productos {
+  color: white;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+}
+.input-productos__box {
+  padding: 0.5rem;
+  flex-basis: 100%;
+}
+
+.fecha::before {
+  content: attr(data-fecha);
+  content: date(attr(data-fecha), "%d/%m/%Y");
+}
+
+.fecha {
+  display: none;
+}
+
+.container {
+  overflow: hidden;
+  width: 100%;
+  margin: 0 auto;
+}
+
+.table-product {
+  max-width: 100%;
+  width: 100%;
+  overflow-x: auto;
+  border-collapse: collapse;
+  margin-top: 20px;
+}
+
+.product {
+  vertical-align: middle;
+  border-bottom: 1px solid #ddd;
+}
+
+.table-product th {
+  padding: 2px;
+  text-align: left;
+  border: 1px solid black;
+}
+
+.table-product th {
+  background-color: #f2f2f2;
+  font-weight: bold;
+}
+
+.table-product img {
+  max-width: 50px;
+  max-height: 50px;
+}
+
+.table-body {
+  font-size: x-small;
+  color: white;
+}
+
+.product__actions {
+  padding: 2px;
+  max-width: 100%;
+  max-height: 100%;
+  justify-content: center;
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+
+.product__action-btn {
+  padding: 10px;
+  background-color: white;
+}
+
+@media screen and (min-width: 600px) {
+  .table-body {
+    font-size: small;
+    color: white;
+  }
+  .product__actions {
+    padding: 1rem;
+    max-width: 100%;
+    max-height: 100%;
+    justify-content: center;
+    display: flex;
+    flex-direction: row;
+    height: 100%;
+  }
+  .product__action-btn {
+    padding: 2px;
+  }
+  .table-product th {
+    padding: 0.5rem;
   }
 }/*# sourceMappingURL=main.css.map */
