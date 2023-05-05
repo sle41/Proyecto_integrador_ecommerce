@@ -4,7 +4,7 @@ if (!localStorage.getItem('lsproducto')) {
     const test= [
         {   
             description: 'Wars con nuestro soporte de exhibición TIE fighter, un diseño preciso y detallado impreso en 3D que dará vida a tu colección.',
-            fecha: '4/5/2023',
+            fecha: '1/5/2023',
             image: '/assets/images/cards/img1.jpg',
             price: 29020,
             producto: 'Soporte de exhibición TIE fighter',
