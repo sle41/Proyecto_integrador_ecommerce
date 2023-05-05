@@ -166,31 +166,29 @@ function locals(){
 
 
 
+//!--- NO FUNCIONA
 
-
-function filtro(filtrar){
-    
-    const nom_p2 = document.getElementById(filtrar);
-    if(nom_p2.value != "")//{nom_p2.value=""};
-    {nom_p2.value = nom_p2.value[0].toUpperCase()+ nom_p2.value.toLowerCase().substring(1);}
-    
-    
-    var cuenta_ingreso= Object.values(JSON.parse(localStorage.lsusuario)).length;
-    console.log("cantidad de actividad en LS: "+cuenta_ingreso);
-    var x=cuenta_ingreso - 1;//descuento 1 para el array que empieza en 0 
-    var cuenta_objetos= Object.values(JSON.parse(localStorage.lsusuario)[x]);
-    const result = cuenta_objetos.filter(word => word.nombre == nom_p2.value);
-    console.log(result);
-    console.log(result.length);
-    console.log(nom_p2.value);
-    
-    // if(nom_p2.value === ""){Swal.fire("ingrese nombre");}
-    // else 
-    
-    Swal.fire("se encontraron "+result.length+" coincidencias");
-    return { resultado: result.length };
-   
+function filtro(){
+        
+  const nom_p2 = document.getElementById("buscar");
+  if(nom_p2.value != "")//{nom_p2.value=""};
+  {nom_p2.value = nom_p2.value[0].toUpperCase()+ nom_p2.value.toLowerCase().substring(1);}
+  
+  
+  var cuenta_ingreso= Object.values(JSON.parse(localStorage.lsproducto)).length;
+  console.log("cantidad de actividad en LS: "+cuenta_ingreso);
+  var x=cuenta_ingreso - 1;//descuento 1 para el array que empieza en 0 
+  var cuenta_objetos= Object.values(JSON.parse(localStorage.lsproducto)[x]);
+  const result = cuenta_objetos.filter(word => word.producto == nom_p2.value);
+  console.log(result);
+  console.log(result.length);
+  console.log(nom_p2.value);
+  
+  
+  document.getElementById("resultados").innerHTML = "Se encontraron " + result.length + " resultados.";
+  
 }
+
 
 
 

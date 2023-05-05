@@ -81,8 +81,8 @@ function addProduct(evt) {
         
         name: elements.name.value,
         description: elements.description.value,
-           };
- 	
+        };
+
     const newFormData = new FormData(evt.target);
     const newProductFormData = Object.fromEntries(newFormData);
     
@@ -101,14 +101,6 @@ function addProduct(evt) {
 
 	
 
-// function deleteProduct(indice) {
-
-//     Products.splice(indice, 1);
-
-//     renderizarTabla();
-
-// }
-
 
 function locals(){
     var datos_existentes = JSON.parse(localStorage.getItem('transito'));
@@ -121,13 +113,32 @@ function locals(){
     cuenta();
 }
 
-//var captura= document.getElementById(product).value;
 		localStorage.setItem('test', JSON.stringify(Products));
-// product
-//     name
-//     description
-//     price
-//     imagen
-//     stock?
-//     jostick?
-//     games?
+
+
+
+
+
+
+
+
+function filtro(){
+        
+        const nom_p2 = document.getElementById("buscar");
+        if(nom_p2.value != "")//{nom_p2.value=""};
+        {nom_p2.value = nom_p2.value[0].toUpperCase()+ nom_p2.value.toLowerCase().substring(1);}
+        
+        
+        var cuenta_ingreso= Object.values(JSON.parse(localStorage.lsproducto)).length;
+        console.log("cantidad de actividad en LS: "+cuenta_ingreso);
+        var x=cuenta_ingreso - 1;//descuento 1 para el array que empieza en 0 
+        var cuenta_objetos= Object.values(JSON.parse(localStorage.lsproducto)[x]);
+        const result = cuenta_objetos.filter(word => word.producto == nom_p2.value);
+        console.log(result);
+        console.log(result.length);
+        console.log(nom_p2.value);
+        
+        
+        document.getElementById("resultados").innerHTML = "Se encontraron " + result.length + " resultados.";
+        
+}

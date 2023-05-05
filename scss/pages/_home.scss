@@ -114,6 +114,7 @@
         margin-left: 10px;
         margin-bottom: 5px;
         text-align: center;
+        justify-content: center;
         color: $color-text-ligth;
     }
 
@@ -166,9 +167,20 @@
     }
 
     .section-cards__cat{
-        padding: 0.5rem 0rem;
+        
+        padding:1rem;
         margin: 0;
         background-color: $color-bg-primary;
+
+    
+    }
+
+    .section-cards__products-count {
+        margin-left: 0px;
+        margin-bottom: 0px;
+        text-align: center;
+        margin-top:5px;
+        color: $color-text-ligth;
     }
 }
 }

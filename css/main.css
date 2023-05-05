@@ -264,16 +264,16 @@ body {
   margin-left: auto;
   color: white;
   display: flex;
-  gap: 0.5rem;
+  gap: 1rem;
   align-items: center;
   padding: 0 1rem;
 }
 .user-navbar__user-avatar {
-  width: 1.8rem;
+  font-size: 1.5rem;
 }
 .user-navbar__cart-icon-container {
-  color: rgb(7, 0, 26);
-  font-size: 1.5rem;
+  font-size: 1.2em;
+  color: white;
 }
 
 .login-usuario__form {
@@ -534,6 +534,7 @@ body {
   margin-left: 10px;
   margin-bottom: 5px;
   text-align: center;
+  justify-content: center;
   color: white;
 }
 
@@ -569,9 +570,16 @@ body {
     border-radius: 50%;
   }
   .section-cards .section-cards__cat {
-    padding: 0.5rem 0rem;
+    padding: 1rem;
     margin: 0;
     background-color: rgb(34, 0, 118);
+  }
+  .section-cards .section-cards__products-count {
+    margin-left: 0px;
+    margin-bottom: 0px;
+    text-align: center;
+    margin-top: 5px;
+    color: white;
   }
 }
 .form {

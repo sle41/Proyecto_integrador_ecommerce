@@ -110,18 +110,19 @@
 .user-navbar {
     
     margin-left: auto;
-    color: white;
+    color: $color-bg-white;
     display: flex;
-    gap: .5rem;
+    gap: 1rem;
     align-items: center;
     padding: 0 1rem;
     &__user-avatar {
-            width: 1.8rem;
+            // width: 1rem;
+            font-size: 1.5rem;
             
     }
     &__cart-icon-container {
-        color: $color-text-dark2;
-        font-size: 1.5rem;
+        font-size: 1.2em;
+        color: $color-bg-white;
     }
 }
 

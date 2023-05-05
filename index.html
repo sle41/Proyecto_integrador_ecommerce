@@ -6,22 +6,34 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     
     <title>PMSPACE 3D</title>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css" integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <!-- incluimos CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/sweetalert2@10.16.6/dist/sweetalert2.min.css">
+
+    <!-- Incluimos la librería JS -->
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@10.16.6/dist/sweetalert2.min.js"></script>
+
+    <!-- Incluimos icon-free de fontawesome  -->
+    <script src="https://kit.fontawesome.com/e08c5458e1.js" crossorigin="anonymous"></script>
+
     <link rel="stylesheet" href="/css/main.css">
 
 </head>
 <body>
+    
+
+
     <header class="header">
         <nav class="navbar">
             <a href="/index.html" class="navbar__nav-link">
                 <img class="navbar__logo" src="/assets/images/LOGO PM.png" alt="Logo del ecommerce">
             </a>
             <div class="user-navbar">
-                <div class="user-navbar__cart-icon-container">
-                    <i class="fa-solid fa-cart-shopping"></i>
-                </div>
+                    <a class="user-navbar__cart-icon-container" href="/pages/shopping/shopping.html">
+                    <i class="fa-solid fa-cart-shopping fa-lg"></i>
+                    </a>
                 <div class="user-navbar__user-avatar-container">
-                    <img id="usuarios" src="https://cdn-icons-png.flaticon.com/512/1077/1077114.png" class="user-navbar__user-avatar" alt="Imagen de usuario">
+                    <i id="usuarios" class="fa-solid fa-user fa-lg user-navbar__user-avatar" alt="Imagen de usuario"> </i>
                 </div>
                 <!-- TODO: avatar de la persona logueada o nombre -->
             </div>
@@ -64,22 +76,23 @@
                 <div class="login-usuario__form--nuevo">
                 <a href="" onclick="nuevousuario()" class="login-usuario__form--nuevo_usuario">NUEVO USUARIO</a>
                 </div>
-                <!-- <input type="image" src="boton_ingresar.png" alt="Ingresar" onclick="login()">
-                <input type="image" src="boton_ingresar.png" alt="nuevo usuario" onclick="nuevousuario()"> -->
             </form>
             
         </div>
         <script src="/js/login.js"></script>  
         <!-- ----------------------------- -->
 
-
-
-
+        
     </header>
+    
+
+
+
     <!-- TODO: Implementar carousel en 2do módulo -->
     <main class="main">
         <section class="section-cards">
             <header class="section-cards__header">
+                
                 <div class="section-cards__products-search-container">
                     
                     <div class="product-search">
@@ -87,18 +100,17 @@
 
                         <img class="product-search__logo-buscar" src="https://cdn-icons-png.flaticon.com/512/25/25313.png" alt="Lupa de Busqueda">
 
-                        <input type="text" class="product-search__input">
-                        <button class="product-search__btn">Buscar</button>
+                        <input type="text" class="product-search__input" name="name" id="buscar">
+                        <button class="product-search__btn" id="buscar" onclick="filtro()"> Buscar </button>
                     </div>
-
                     <div class="section-cards__cat">
-                        <div class="section-cards__category">
+                        <!-- <div class="section-cards__category">
                             <h1 class="section-cards__category--text">
-                            CATEGORÍA: NAVES ESPACIALES
+                            CATEGORÍA:
                             </h1>
-                        </div>
+                        </div> -->
                         <div class="section-cards__products-count">
-                            Se encontraron X productos
+                            <p id="resultados"></p>
                         </div>
                         </div>
                 </div>

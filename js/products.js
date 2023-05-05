@@ -1,20 +1,21 @@
-// if (!localStorage.getItem('lsproducto')) {
-//     console.log("local Storage inexistente, no realizado hasta el momento");
-//     // lsnull();
-//     const test= [
-//         {
-//             name: 'Soporte de exhibición TIE fighter',
-//             description: 'Wars con nuestro soporte de exhibición TIE fighter, un diseño preciso y detallado impreso en 3D que dará vida a tu colección.',
-//             price: 2900,
-//             stock: true,
-//             image: '/assets/images/cards/img1.jpg',
+if (!localStorage.getItem('lsproducto')) {
+    console.log("local Storage inexistente, no realizado hasta el momento");
+    // lsnull();
+    const test= [
+        {   
+            description: 'Wars con nuestro soporte de exhibición TIE fighter, un diseño preciso y detallado impreso en 3D que dará vida a tu colección.',
+            fecha: '4/5/2023',
+            image: '/assets/images/cards/img1.jpg',
+            price: 29020,
+            producto: 'Soporte de exhibición TIE fighter',
             
-//         },];
-//         localStorage.setItem('lsproducto', JSON.stringify([test]))
+            
+        },];
+        localStorage.setItem('lsproducto', JSON.stringify([test]))
 
-//  }else{console.log("local Storage ok")
+ }else{console.log("local Storage ok")
 
-// }   
+}   
 
 
 const n = JSON.parse(localStorage.getItem('lsproducto')).length
@@ -82,6 +83,7 @@ function addProduct(evt) {
         producto: elements.producto.value,
         description: elements.description.value,
         price: elements.price.value,
+        fecha: elements.fecha.value,
         };
 	
     const newFormData = new FormData(evt.target);
@@ -138,7 +140,7 @@ function locals(){
 //!--- NO ME BUSCA
 
 function filtro(){
-    
+        
     const nom_p2 = document.getElementById("buscar");
     if(nom_p2.value != "")//{nom_p2.value=""};
     {nom_p2.value = nom_p2.value[0].toUpperCase()+ nom_p2.value.toLowerCase().substring(1);}
@@ -153,10 +155,8 @@ function filtro(){
     console.log(result.length);
     console.log(nom_p2.value);
     
-    // if(nom_p2.value === ""){Swal.fire("ingrese nombre");}
-    // else 
     
-    Swal.fire("se encontraron "+result.length+" resultados");
+    document.getElementById("resultados").innerHTML = "Se encontraron " + result.length + " resultados.";
     
 }
 
