@@ -1,22 +1,40 @@
 if (!localStorage.getItem('lsproducto')) {
     console.log("local Storage inexistente, no realizado hasta el momento");
-    // lsnull();
+    lsnull();
     const test= [
         {   
-            description: 'Wars con nuestro soporte de exhibición TIE fighter, un diseño preciso y detallado impreso en 3D que dará vida a tu colección.',
-            fecha: '1/5/2023',
+            description: 'Muestra tu amor por Star Wars con nuestro soporte de exhibición TIE fighter, un diseño preciso y detallado impreso en 3D que dará vida a tu colección.',
+            fecha: '4/5/2023',
             image: '/assets/images/cards/img1.jpg',
-            price: 29020,
+            price: 2.500,
             producto: 'Soporte de exhibición TIE fighter',
             
             
         },
         {   
-            description: 'Wars con nuestro soporte de exhibición TIE fighter, un diseño preciso y detallado impreso en 3D que dará vida a tu colección.',
-            fecha: '6/5/2023',
-            image: '/assets/images/cards/img1.jpg',
-            price: 29020,
-            producto: 'Soporte de exhibición TIE fighter',
+            description: 'Lleva la emoción del espacio a tu hogar con nuestro "Transbordador espacial Rocket booster", una pieza realista e impresionante impresa en 3D que hará volar tu imaginación.',
+            fecha: '1/5/2023',
+            image: '/assets/images/cards/img2.jpg',
+            price: 10.200,
+            producto: 'Transbordador espacial Rocket booster',
+            
+            
+        },
+        {   
+            description: '¡Haz que tu colección de Warcraft cobre vida con nuestro Caza TIE de Terrallende! Un diseño preciso y detallado que hará que cualquier fanático se emocione.',
+            fecha: '25/4/2023',
+            image: '/assets/images/cards/img3.jpg',
+            price: 12.000,
+            producto: 'Caza TIE de Terrallende',
+            
+            
+        },
+        {   
+            description: 'Con nuestro modelo 3D X Wing, podrás admirar de cerca la nave espacial más emblemática de Star Wars. Detallado y preciso, es perfecto para los fans y coleccionistas más exigentes.',
+            fecha: '12/4/2023',
+            image: '/assets/images/cards/img4.jpeg',
+            price: 22.500,
+            producto: 'X wing',
             
             
         },];
@@ -25,6 +43,8 @@ if (!localStorage.getItem('lsproducto')) {
  }else{console.log("local Storage ok")
 
 }   
+
+
 
 
 const n = JSON.parse(localStorage.getItem('lsproducto')).length
@@ -46,7 +66,7 @@ function renderizarTabla() {
         let imageSrc = producto.image ? producto.image : '/assets/images/no-product.png'; 
 
         //4- Introducir dentro del tbody una fila por producto con sus respectivas celdas
-       const tableRow = `<tr class="product" id="pepe">
+       const tableRow = `<tr class="product">
                             <td class="product__img-cell"><img class="product__img" src="${imageSrc}" alt="${producto.producto}"></td>
                             <td class="product__name">${producto.producto}</td>
                             <td class="product__desc">${producto.description}</td>
@@ -67,13 +87,8 @@ function renderizarTabla() {
                             
                             </td>
                         </tr>`
-     
-
-        
 
     tableBody.innerHTML += tableRow   ;   
-	 
-		
 
     } )
     ;
@@ -129,9 +144,9 @@ function deleteProduct(indice) {
             'El producto ha sido borrado',
             'success'
         )
-      }
+    }
     })
-  }
+    }
   
 
 
@@ -146,7 +161,7 @@ function locals(){
 }
 
 
-//!--- NO ME BUSCA
+//!--- BUSCADOR
 
 function filtro(){
         

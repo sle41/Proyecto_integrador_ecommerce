@@ -1,20 +1,42 @@
-.alert-dialog {
-    position: absolute;
-    bottom: 15px;
-    left: 50%;
-    transform: translateX(-50%);
-    background-color: $color-bg-primary;
-    padding: 2rem 3rem;
-    font-size: 1.25rem;
-    color: white;
-    text-align: center;
-    visibility: hidden;
-    opacity: 0;
-    transition:  visibility linear 0.5s, opacity 0.5s linear;
-    box-shadow: 0 0 15px rgba(0, 0, 0, 0.5);
-    &.show {
-        visibility: visible;
+// .alert-dialog {
+//     position: absolute;
+//     bottom: 15px;
+//     left: 50%;
+//     transform: translateX(-50%);
+//     background-color: $color-bg-primary;
+//     padding: 2rem 3rem;
+//     font-size: 1.25rem;
+//     color: white;
+//     text-align: center;
+//     visibility: hidden;
+//     opacity: 0;
+//     transition:  visibility linear 0.5s, opacity 0.5s linear;
+//     box-shadow: 0 0 15px rgba(0, 0, 0, 0.5);
+//     &.show {
+//         visibility: visible;
 
-        opacity: 1;
+//         opacity: 1;
+//     }
+// }
+
+    .swal2-modal {
+    background-color: $color-bg-primary;
+    border-radius: 10px;
+    border: none;
+    box-shadow: 0 0 10px $color-bg-secondary;
     }
-}
+    
+    .swal2-title {
+    color: $color-text-light-2;
+    font-size: 24px;
+    font-weight: bold;
+    }
+    
+    .swal2-html-container {
+    color: $color-text-light-3;
+    font-size: 18px;
+    }
+    
+ 
+
+    

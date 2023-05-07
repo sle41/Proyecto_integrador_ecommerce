@@ -7,16 +7,23 @@
     
     <title>PMSPACE 3D</title>
 
-    <!-- incluimos CSS -->
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/sweetalert2@10.16.6/dist/sweetalert2.min.css">
-
+    
+    <!-- Incluimos icon-free de fontawesome  -->
+    <script src="https://kit.fontawesome.com/e08c5458e1.js" crossorigin="anonymous"></script>
+    
     <!-- Incluimos la librería JS -->
     <script src="https://cdn.jsdelivr.net/npm/sweetalert2@10.16.6/dist/sweetalert2.min.js"></script>
 
-    <!-- Incluimos icon-free de fontawesome  -->
-    <script src="https://kit.fontawesome.com/e08c5458e1.js" crossorigin="anonymous"></script>
-
+     <!-- incluimos CSS -->
+     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/sweetalert2@10.16.6/dist/sweetalert2.min.css">
+    
+    <!-- <link rel="stylesheet" href="/css/main.css"> -->
     <link rel="stylesheet" href="/css/main.css">
+
+    <!-- ------------------------------------ -->
+
+
+    
 
 </head>
 <body>
@@ -28,14 +35,20 @@
             <a href="/index.html" class="navbar__nav-link">
                 <img class="navbar__logo" src="/assets/images/LOGO PM.png" alt="Logo del ecommerce">
             </a>
+
+
+             <!-- TODO: avatar y carrito de la persona logueada -->
             <div class="user-navbar">
                     <a class="user-navbar__cart-icon-container" href="/pages/shopping/shopping.html">
-                    <i class="fa-solid fa-cart-shopping fa-lg"></i>
+                        <i class="fa-solid fa-cart-shopping fa-lg"></i>
                     </a>
+                
                 <div class="user-navbar__user-avatar-container">
                     <i id="usuarios" class="fa-solid fa-user fa-lg user-navbar__user-avatar" alt="Imagen de usuario"> </i>
                 </div>
-                <!-- TODO: avatar de la persona logueada o nombre -->
+
+                <div class="user-navbar__cart-badge" id="cart-count">0</div>
+               
             </div>
             
             <input type="checkbox" class="navbar__menu-btn" id="menu-btn">
@@ -133,7 +146,7 @@
             <div id="table-body" class="cards-container">
 
             </div>
-            <script src="/js/main.js"></script>  
+              
 
             <!--------------------------------->
 
@@ -355,6 +368,6 @@
         </div>
 
     </footer>
-
+    <script src="/js/main.js"></script>
 </body>
 </html>

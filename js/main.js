@@ -8,22 +8,22 @@ const tableBody = document.querySelector('#table-body');
 
 //2- Definir una función para iterar el array
 function renderizarTabla() {
+    
     tableBody.innerHTML = '';
 
+    for (let i = Products.length -1 ; i < Products.length; i++) {
 
-for (let i = Products.length -1 ; i < Products.length; i++) {
-
-    console.log(`Elemento ${i}:`);
+        console.log(`Elemento ${i}:`);
 
     for (let j = 0; j < Products[i].length; j++) {
 
-    console.log(`  ${Products[i][j]}`);
-    const producto =Products[i][j]
+        console.log(`  ${Products[i][j]}`);
+
+        const producto =Products[i][j]
 
         let imageSrc = producto.image ? producto.image : '/assets/images/no-product.png';
         
         const CARD = ` 
-        
                 <article class="card">
                     <div class="card__header">
                         <img src="${imageSrc}" alt="${producto.name}"  class="card__img">
@@ -58,77 +58,73 @@ for (let i = Products.length -1 ; i < Products.length; i++) {
                     </div>
                 </article> `
 
-    //   tableBody.innerHTML += tableRow   ;   
+    
 	tableBody.innerHTML += CARD;
 
     }
     }
     
-
 }
 
-renderizarTabla();
+// renderizarTabla();
 
-function addProduct(evt) {
+
+    function addProduct(evt) {
     
+        evt.preventDefault();
+        console.dir(evt.target);
+        const elements = evt.target.elements; 
 
-    evt.preventDefault();
-    console.dir(evt.target);
-    const elements = evt.target.elements; 
-
-    
-    const newProduct = {
-        
-        name: elements.name.value,
-        description: elements.description.value,
+        const newProduct = {
+            name: elements.name.value,
+            description: elements.description.value,
         };
 
-    const newFormData = new FormData(evt.target);
-    const newProductFormData = Object.fromEntries(newFormData);
+        const newFormData = new FormData(evt.target);
+        const newProductFormData = Object.fromEntries(newFormData);
     
-    console.log(newProductFormData);
-    Products.push(newProductFormData);
+        console.log(newProductFormData);
+        Products.push(newProductFormData);
     
-    locals();
-    renderizarTabla();
-    evt.target.reset();
-    elements.name.focus();
+        locals();
+        renderizarTabla();
+        evt.target.reset();
+        elements.name.focus();
     
-
-
     };
 
 
 	
 
 
-function locals(){
-    var datos_existentes = JSON.parse(localStorage.getItem('transito'));
-     //var datos_existentes = localStorage.getItem('transito');
-    //datos_existentes = datos_existentes === null ? [] : JSON.parse(datos_existentes);
-    if (datos_existentes === null)  {datos_existentes=[] };
-    datos_existentes.push(Products);    
-    localStorage.setItem('transito', JSON.stringify(datos_existentes));
-    console.log("local storage recibio actualizacion");
-    cuenta();
-}
+    function locals(){
+
+        var datos_existentes = JSON.parse(localStorage.getItem('transito'));
+        if (datos_existentes === null)  {datos_existentes=[] };
+        datos_existentes.push(Products);    
+        localStorage.setItem('transito', JSON.stringify(datos_existentes));
+        console.log("local storage recibio actualizacion");
+        cuenta();
+    }
 
 		localStorage.setItem('test', JSON.stringify(Products));
 
 
 
-
-
-
-
-
-function filtro(){
+    function filtro(){
         
         const nom_p2 = document.getElementById("buscar");
-        if(nom_p2.value != "")//{nom_p2.value=""};
-        {nom_p2.value = nom_p2.value[0].toUpperCase()+ nom_p2.value.toLowerCase().substring(1);}
         
-        
+
+        if(nom_p2.value != ""){
+            nom_p2.value = nom_p2.value[0].toUpperCase()+ nom_p2.value.toLowerCase().substring(1);
+        } else {
+            Swal.fire({
+                title: 'Ups! No buscaste nada 🤔',
+                text: 'Escribe el nombre del producto que quieras buscar!',
+            })
+        }
+
         var cuenta_ingreso= Object.values(JSON.parse(localStorage.lsproducto)).length;
         console.log("cantidad de actividad en LS: "+cuenta_ingreso);
         var x=cuenta_ingreso - 1;//descuento 1 para el array que empieza en 0 
@@ -137,8 +133,15 @@ function filtro(){
         console.log(result);
         console.log(result.length);
         console.log(nom_p2.value);
-        
-        
-        document.getElementById("resultados").innerHTML = "Se encontraron " + result.length + " resultados.";
-        
-}
+            
+            
+            document.getElementById("resultados").innerHTML = "Se encontraron " + result.length + " resultados.";
+
+            
+            
+    }
+
+
+    //--Cartel incial ingresar como ADMIN o USUARIO
+
+    
